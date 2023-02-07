@@ -125,7 +125,7 @@ function colonizeSolarSystem(ss: SolarSystem) {
 
 Even if you aren't into planetary invasion[4],
 you might at least agree that the function `colonizeSolarSystem`
-could use a little work. Or maybe you are believe in WET code,
+could use a little work. Or maybe you believe in WET code,
 that think it's fine as it is, because not a duplicated code is in sight.
 And that's fine too.
 
@@ -259,7 +259,7 @@ while in your decision-making process, it's almost quite likely that
 you still haven't internalized properly what abstractions are for.
 
 Recall how I defined abstractions: to reduce complexity
-or simplify code by means hiding irrelevant details
+or simplify code by means of hiding irrelevant details
 under a name or idea. In programming, one way to
 hide details is through functions. You can also
 think of it as a way of extending your domain or programming language's vocabulary.
@@ -267,7 +267,7 @@ Note how duplication is completely absent from this definition.
 Although both abstraction and DRY'ing involves
 putting code behind a common name, the intent is
 very different. DRY/WET is tangent to the process
-of making an abstraction. That is to say, if you
+of making an abstraction. That is to say, if you are
 creating a function/class for the sole purpose removing
 duplicated code, you are by definition not creating
 an abstraction.
@@ -296,7 +296,7 @@ Deduplication is easier since it's all mechanically
 moving code around, e.g., refactoring.
 It's harder to create abstractions that simplifies code or enables
 more complex expressions.
-Yes, it's harder, but don't it stop you from
+Yes, it's harder, but don't let it stop you from
 trying. Even simple abstractions in the
 `colonizeSolarSystem` goes a long way.
 
@@ -305,8 +305,8 @@ trying. Even simple abstractions in the
 Okay, by now you feel like you have reached a higher state
 of being, and that you now understand the true meaning
 of abstraction. You are ready to spread the good message
-to the unwashed mortals that still abstract merely for
-the duplicities.
+to the unwashed mortals that still abstract merely to
+foil duplicities.
 
 But then, someone rings your doorbell and you opened
 the door to a person who without solicitation uttered
