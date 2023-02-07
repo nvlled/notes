@@ -32,7 +32,7 @@ This bears repeating and worth belaboring:
 Reducing duplication isn't the only purpose of abstraction.
 
 Yes, abstraction can be used to avoid duplication,
-but I don't agree that it's the only purpose of abstraction.
+but it's not the only purpose of abstraction.
 Also, just with everything, abstraction can be overdone that
 results in untamable gargantuan behemoth. It doesn't mean
 it should not be used, or should be avoided. If done right, abstractions
@@ -60,7 +60,7 @@ one code example, a silly one at that,
 and show how abstractions could
 help simplify them.
 
-Consider the following code:
+Try to read the following code.
 
 ```typescript
 function colonizeSolarSystem(ss: SolarSystem) {
@@ -125,7 +125,7 @@ function colonizeSolarSystem(ss: SolarSystem) {
 
 Even if you aren't into planetary invasion[4],
 you might at least agree that the function `colonizeSolarSystem`
-could use a little work. Or maybe you are from the WET procedural faction,
+could use a little work. Or maybe you are believe in WET code,
 that think it's fine as it is, because not a duplicated code is in sight.
 And that's fine too.
 
@@ -215,8 +215,8 @@ function colonizeSolarSystem(ss: SolarSystem) {
 }
 ```
 
-There, `colonizeSolarSystem` is now concise, and it's now easier to
-see the machinations that unfold and the doom that awaits us all!!1
+There, `colonizeSolarSystem` is now concise, and it's now easier at a glance
+to see the machinations that unfold and the doom that awaits us all!!1
 
 Or not. You could say it's now harder to read because
 it hides all the details, and now you have to jump places
@@ -240,16 +240,8 @@ Just don't do it sub-conciously while chanting wet yagnis.
 
 If despite the points I've made, you are going to still protest that
 those functions are only ever going to be used once, why even bother
-defining them, then I failed to convey my points clearly,
-you still are beholden to the past teachings you hold dearly.
-
-The key points are:
-
-- abstractions are not just for de-duplicating code
-- use acronyms as a mnemonic, not as a substitute for thoughtful reasoning and judgment
-- use abstractions if they could help reduce the complexity
-- TANSTAAFL
-- the aliens are coming for us
+defining them, then I failed to convey my points clearly, or
+you still are beholden to the teachings you hold dearly.
 
 ---
 
@@ -270,13 +262,13 @@ Recall how I defined abstractions: to reduce complexity
 or simplify code by means hiding irrelevant details
 under a name or idea. In programming, one way to
 hide details is through functions. You can also
-think of it as a way of extending your programming language's or domain's vocabulary.
+think of it as a way of extending your domain or programming language's vocabulary.
 Note how duplication is completely absent from this definition.
 Although both abstraction and DRY'ing involves
 putting code behind a common name, the intent is
 very different. DRY/WET is tangent to the process
 of making an abstraction. That is to say, if you
-creating a function/class for the purpose removing
+creating a function/class for the sole purpose removing
 duplicated code, you are by definition not creating
 an abstraction.
 
@@ -300,9 +292,13 @@ are you using. Although code deduplication is a valid use case,
 you likely want to be using the other kind of abstraction for most
 of the time, if ever you need to create an abstraction.
 
-One last thing: real abstraction is harder to do right.
 Deduplication is easier since it's all mechanically
 moving code around, e.g., refactoring.
+It's harder to create abstractions that simplifies code or enables
+more complex expressions.
+Yes, it's harder, but don't it stop you from
+trying. Even simple abstractions in the
+`colonizeSolarSystem` goes a long way.
 
 ---
 
@@ -310,7 +306,7 @@ Okay, by now you feel like you have reached a higher state
 of being, and that you now understand the true meaning
 of abstraction. You are ready to spread the good message
 to the unwashed mortals that still abstract merely for
-the duplicities[7].
+the duplicities.
 
 But then, someone rings your doorbell and you opened
 the door to a person who without solicitation uttered
@@ -320,14 +316,14 @@ fell apart, and your higher state of being crumbled to
 a formless wreck that spiraled towards very depths of insignificance.
 
 If abstractions requires more thought, and costs more
-to do wrong, then duplications must be the default and
-preferred way of programming, one must abstract only
-few cases.
+when done wrong, then duplications must be the default and
+preferred way of programming, and abstraction should be
+avoided if possible.
 
 Once again, if catchphrases and sound bites are enough
 to invalidate any convictions you have, you haven't really
 gone far much from chanting acronyms. Focus on the essentials,
-discard the irrelevant, and the truth reveals itself.
+discard the irrelevant, and the true form reveals itself.
 Ask yourself: is this statement true?
 "duplication is far cheaper than wrong abstraction"
 How true is it, when is it true?
@@ -340,33 +336,50 @@ whether it's completely DRY and exhausted of reason and harmony,
 or WET and flooded with repeated, eternal pain and suffering.
 You could argue that it's easier to change code with no abstractions,
 I could argue the same thing, but in reverse.
-You could further argue that it's more costly to create wrong abstractions.
-To an extent, I agree, but again this only applies to extreme, degenerate cases,
+You could argue that it's more costly to create wrong abstractions.
+I agree, but again this only applies to extreme, degenerate cases,
 where the wrong abstraction has been deeply entrenched in the codebase.
 You can't objectively say that it was because of abstraction, without
-first demonstrating that the other case is any better, where duplication is done to the extreme.
+first demonstrating that the other extreme case is any better, where
+there are little to no abstractions are used, and duplications are everywhere.
 
 When someone says duplication is cheaper than wrong abstraction,
-it most likely that mild to moderation duplication is being compared to a complex
+it is most definitely because that mild to moderation duplication is being compared to a complex
 abstraction. It's not fair to compare cases of different severity.
 If I want argue for the other end, I would compare a simple abstraction
 to a pathological case where a code block is repeated a thousand times
-in different places each with minor variations, and then I would claim
-that abstractions is cheaper than excessively duplicated code.
+in different places each with minor variations, to which then I claim
+that abstraction is far cheaper than excessively duplicated code.
 
-On one hand, I think having strong opinions about something
+But case in point, abstractions do have runtime costs. Even functions
+add overhead. But unless you are working on a really restricted
+environment, it doesn't matter for most of the time. Plus,
+compilers are good at optimizing abstractions for free.
+Gargantuan abstractions that evolve into libraries or frameworks
+may add significant cost, but it's disingenous to use that as a point of contention
+when topic is about choosing duplication over abstraction. Meaning,
+it's besides the point and not relevant.
+
+Despite my leanings towards better abstractions, I do see where
+the anti-abstraction sentiment is coming from. There was an era
+where pure OOP and design patterns dominated the software industry.
+On one hand, I think having strong convictions/opinions about something
 is good, as it pushes ideas beyond the border, where new ideas
-are discovered. On the other hand, if there is lack of
-competition or contention, the ideas that gets pushed
-too far becomes dogmatic, past the point of no return.
-I think the anti-abstraction
-camp is getting dominant, and not enough people are
-helping to balance the cause.
+are improved or discovered. On the other hand, if there is lack of
+competition or contention, the unchallenged ideas gets pushed
+too far into dogmatic, authoritarian territory.
+I think the anti-abstraction crowd is doing well to move
+the industry from the era of bloated abstractions, but
+let us not push too far ahead, lest we fall past over the
+edge.
 
-Okay, I'm going to stop here, because I think this
-is getting weirder by the second.
+To summarize my points:
 
----
+- abstractions are not just for de-duplicating code
+- use acronyms as a mnemonic, not as a substitute for thoughtful reasoning and judgment
+- use abstractions if they could help reduce the complexity
+- the aliens are coming for us
+- TANSTAAFL
 
 [1] For anyone unfamiliar with these terms, DRY stands
 for Don't Repeat Yourself, WET for Write Everything Twice.
@@ -388,5 +401,3 @@ as aliens can make a slurpee out of it.
 [6] https://en.wikipedia.org/wiki/Abstraction_principle_(computer_programming)
 
 > In software engineering and programming language theory, the abstraction principle (or the principle of abstraction) is a basic dictum that aims to reduce duplication of information in a program (usually with emphasis on code duplication) whenever practical by making use of abstractions provided by the programming language or software libraries[citation needed]
-
-[7] Yes, this is a joke.
