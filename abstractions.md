@@ -368,18 +368,22 @@ is good, as it pushes ideas beyond the border, where new ideas
 are improved or discovered. On the other hand, if there is lack of
 competition or contention, the unchallenged ideas gets pushed
 too far into dogmatic, authoritarian territory.
-I think the anti-abstraction crowd is doing well to move
+I think the anti-abstraction crowd did well to move
 the industry from the era of bloated abstractions, but
 let us not push too far ahead, lest we fall past over the
 edge.
 
-To summarize my points:
+The key takeaways are:
 
 - abstractions are not just for de-duplicating code
 - use acronyms as a mnemonic, not as a substitute for thoughtful reasoning and judgment
 - use abstractions if they could help reduce the complexity
 - the aliens are coming for us
-- TANSTAAFL
+- TANSTAAFL, abstraction has a cost, so is the absence of it
+
+AI summary[7]:
+
+> abstraction is a way of reducing complexity in programming by hiding irrelevant details. It is often confused with code deduplication, but the two concepts are actually quite different. Abstraction can be used to simplify code and enable more complex expressions, but it can also be overdone and lead to untamable behemoths. The debate between abstraction and duplication is often oversimplified, as both have their pros and cons. Abstraction can be costly if done wrong, but it is not necessarily more expensive than excessive duplication. Ultimately, it is important to be aware of the different types of abstractions and use them thoughtfully.
 
 [1] For anyone unfamiliar with these terms, DRY stands
 for Don't Repeat Yourself, WET for Write Everything Twice.
@@ -401,3 +405,5 @@ as aliens can make a slurpee out of it.
 [6] https://en.wikipedia.org/wiki/Abstraction_principle_(computer_programming)
 
 > In software engineering and programming language theory, the abstraction principle (or the principle of abstraction) is a basic dictum that aims to reduce duplication of information in a program (usually with emphasis on code duplication) whenever practical by making use of abstractions provided by the programming language or software libraries[citation needed]
+
+[7] Kagi's universal summarizer
